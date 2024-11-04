@@ -36,5 +36,30 @@ public class App {
     for (String i : capitalCities.keySet()) {
     System.out.printf("   %-15s ||   %-50s %n", i ,capitalCities.get(i));
     }
+
+    HashMap<String, Integer> map = new HashMap<>();
+    map.put("key1", 1);
+    map.put("key2", 2);
+    System.out.println(map);
+
+
+    // Edit a key
+    String oldKey = "key1";
+    String newKey = "newKey";
+    if (map.containsKey(oldKey)) {
+      int value = map.get(oldKey);
+      map.remove(oldKey);
+      map.put(newKey, value);
+    }
+
+    // Edit a value
+    String key = "newKey";
+    int newValue = 10;
+    if (map.containsKey(key)) {
+      map.put(key, newValue);
+    }
+
+    System.out.println(map);
+
   }
 }
